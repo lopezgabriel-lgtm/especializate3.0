@@ -14,10 +14,11 @@ html {
     /* Paleta EspecIAlizate */
     --azul-oscuro: #153244;
     --azul-medio: #033144;
-    /* Tono oscuro del degradado para contraste */
-    --cian-principal: #8EE2D6;
-    /* Reemplaza al amarillo anterior */
-    --celeste-claro: #E9FFFB;
+    --azul-acento: #035C80;
+    --azul-acento-hover: #024A67;
+    --azul-acento-suave: rgba(3, 92, 128, 0.10);
+
+    --celeste-claro: #EAF4F8;
 
     /* Grises y neutros */
     --blanco: #FFFFFF;
@@ -123,14 +124,14 @@ body {
     padding: 10px 18px;
     border-radius: 4px;
     font-weight: 700;
-    border: 1px solid var(--cian-principal);
+    border: 1px solid rgba(255, 255, 255, 0.65);
     transition: all 0.2s ease;
     text-align: center;
 }
 
 .btn-nav-azul:hover {
-    background-color: var(--cian-principal);
-    color: var(--azul-oscuro) !important;
+    background-color: var(--azul-acento);
+    color: var(--blanco) !important;
 }
 
 /* --- MENÚ HAMBURGUESA --- */
@@ -201,7 +202,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--cian-principal);
+    background: var(--azul-acento);
 }
 
 .hero-inner {
@@ -214,7 +215,7 @@ body {
     font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--cian-principal);
+    color: var(--blanco);
     margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
@@ -225,7 +226,7 @@ body {
     content: '';
     width: 20px;
     height: 2px;
-    background: var(--cian-principal);
+    background: var(--blanco);
 }
 
 /* Logo de Imagen en Hero */
@@ -254,8 +255,8 @@ body {
 }
 
 .btn-primary {
-    background: var(--cian-principal);
-    color: var(--azul-oscuro);
+    background: var(--azul-acento);
+    color: var(--blanco);
     font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -263,7 +264,7 @@ body {
     border-radius: 4px;
     text-decoration: none;
     cursor: pointer;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.65);
     letter-spacing: 0.3px;
     transition: opacity 0.2s;
 }
@@ -287,8 +288,9 @@ body {
 }
 
 .btn-secondary:hover {
-    border-color: var(--cian-principal);
-    color: var(--cian-principal);
+    background: var(--azul-acento);
+    border-color: rgba(255, 255, 255, 0.65);
+    color: var(--blanco);
 }
 /* --- SECCIÓN RECORRIDO --- */
 .recorrido-section {
@@ -332,7 +334,7 @@ body {
     padding: 42px 34px 28px;
     background: var(--blanco);
     border-radius: 8px;
-    border-bottom: 11px solid var(--cian-principal);
+    border-bottom: 11px solid var(--azul-acento);
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.2s ease;
@@ -352,8 +354,8 @@ body {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: var(--cian-principal);
-    color: var(--azul-medio);
+    background: var(--azul-acento);
+    color: var(--blanco);
     font-size: 22px;
     line-height: 1;
     font-weight: 800;
@@ -535,11 +537,11 @@ body {
 }
 
 .label-cian {
-    color: var(--cian-principal);
+    color: var(--azul-acento);
 }
 
 .label-cian::before {
-    background: var(--cian-principal);
+    background: var(--azul-acento);
 }
 
 .sec-title {
@@ -565,9 +567,9 @@ body {
 }
 
 
-/* --- SECCIÓN PÚBLICO: FULL WIDTH CIAN --- */
+/* --- SECCIÓN PÚBLICO: FULL WIDTH AZUL --- */
 .publico-wrap {
-  background-color: var(--cian-principal);
+  background-color: var(--azul-acento);
   padding: 4.5rem 2rem;
   width: 100%;
 }
@@ -577,12 +579,12 @@ body {
   margin: 0 auto;
 }
 
-/* Forzar color oscuro en el eyebrow sobre fondo cian */
+/* Contraste alto sobre el azul institucional */
 .label-dark {
-  color: var(--azul-oscuro) !important;
+  color: var(--blanco) !important;
 }
 .label-dark::before {
-  background: var(--azul-oscuro) !important;
+  background: var(--blanco) !important;
 }
 
 .publico-grid-alt {
@@ -595,7 +597,7 @@ body {
 .pub-card-alt {
   background: transparent;
   padding: 0 1.5rem 0 0;
-  border-right: 1px solid rgba(21, 50, 68, 0.15); /* Línea separadora sutil azul oscura */
+  border-right: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 /* Le sacamos la línea al último elemento */
@@ -607,7 +609,7 @@ body {
 .pub-num-alt {
   font-size: 32px;
   font-weight: 700;
-  color: var(--blanco); /* Blanco resalta hermoso sobre el turquesa */
+  color: var(--blanco); /* Blanco resalta hermoso sobre el azul */
   line-height: 1;
   margin-bottom: 0.75rem;
 }
@@ -615,14 +617,14 @@ body {
 .pub-title-alt {
   font-size: 15px;
   font-weight: 700;
-  color: var(--azul-oscuro);
+  color: var(--blanco);
   margin-bottom: 0.5rem;
 }
 
 .pub-body-alt {
   font-size: 13px;
-  color: var(--azul-oscuro);
-  opacity: 0.85; /* Un tono un poquito más suave para diferenciarlo del título */
+  color: var(--blanco);
+  opacity: 0.88; /* Un tono un poquito más suave para diferenciarlo del título */
   line-height: 1.6;
   font-weight: 400;
 }
@@ -631,7 +633,7 @@ body {
 @media (max-width: 768px) {
   .pub-card-alt {
     border-right: none;
-    border-bottom: 1px solid rgba(21, 50, 68, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
     padding: 0 0 1.5rem 0;
   }
   .pub-card-alt:last-child {
@@ -659,10 +661,10 @@ body {
     margin: 0 0 1rem;
     padding: .48rem 1rem;
 
-    background: var(--cian-principal);
+    background: var(--azul-acento);
     border-radius: 999px;
 
-    color: var(--azul-medio);
+    color: var(--blanco);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -702,7 +704,7 @@ body {
 }
 
 .curso-card:hover {
-    border-top-color: var(--cian-principal);
+    border-top-color: var(--azul-acento);
 }
 
 .curso-tag {
@@ -713,10 +715,10 @@ body {
     margin-bottom: .65rem;
     padding: .38rem .8rem;
 
-    background: rgba(142, 226, 214, 0.28);
+    background: rgba(3, 92, 128, 0.12);
     border-radius: 999px;
 
-    color: var(--azul-medio);
+    color: var(--azul-acento);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -777,8 +779,8 @@ body {
   gap: 6px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--azul-oscuro); /* Texto azul oscuro */
-  background-color: var(--cian-principal); /* Fondo turquesa/cian */
+  color: var(--blanco);
+  background-color: var(--azul-acento);
   padding: 8px 16px;
   border-radius: 6px; /* Bordes redondeados como en tu imagen */
   text-decoration: none;
@@ -791,9 +793,9 @@ body {
 
 /* Efecto al pasar el mouse por encima */
 .btn-download:hover {
-  background-color: #7bd1c4; /* Un cian apenitas más oscuro */
-  transform: translateY(-2px); /* Pequeño salto hacia arriba */
-  box-shadow: 0 4px 10px rgba(142, 226, 214, 0.3); /* Sombra turquesa sutil */
+  background-color: var(--azul-acento-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(3, 92, 128, 0.24);
 }
 
 /* =========================================
@@ -826,9 +828,9 @@ body {
     gap: 8px;
     padding: 7px 16px;
     margin-bottom: 16px;
-    background: #dff9f6;
+    background: var(--azul-acento);
     border-radius: 999px;
-    color: #003c55;
+    color: var(--blanco);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -849,7 +851,7 @@ body {
 }
 
 .desafios-title span {
-    color: #078982;
+    color: var(--azul-acento);
 }
 
 .desafios-intro {
@@ -891,7 +893,8 @@ body {
 }
 
 .desafio-icon--servicios {
-    background: #d8faf3;
+    background: var(--azul-acento);
+    color: var(--blanco);
 }
 
 .desafio-icon--gastronomia {
@@ -938,9 +941,9 @@ body {
     gap: 10px;
     min-height: 44px;
     padding: 0 22px;
-    background: #73ddd3;
+    background: var(--azul-acento);
     border-radius: 8px;
-    color: #003c55;
+    color: var(--blanco);
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
@@ -952,9 +955,9 @@ body {
 }
 
 .desafios-btn:hover {
-    background: #5dd3c8;
+    background: var(--azul-acento-hover);
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 137, 130, 0.12);
+    box-shadow: 0 6px 16px rgba(3, 92, 128, 0.20);
 }
 
 .desafios-access {
@@ -1151,7 +1154,7 @@ body {
     left: 0;
     top: 0;
     height: 3px;
-    background: var(--cian-principal);
+    background: var(--azul-acento);
     width: 100%;
 }
 
@@ -1159,7 +1162,7 @@ body {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: var(--cian-principal);
+    color: var(--azul-acento);
     margin-bottom: .4rem;
     display: block;
 }
@@ -1188,10 +1191,10 @@ body {
     margin: 0 0 1rem;
     padding: .48rem 1rem;
 
-    background: var(--cian-principal);
+    background: var(--azul-acento);
     border-radius: 999px;
 
-    color: var(--azul-medio);
+    color: var(--blanco);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1211,10 +1214,10 @@ body {
     margin: 0 0 1rem;
     padding: .48rem 1rem;
 
-    background: var(--cian-principal);
+    background: var(--azul-acento);
     border-radius: 999px;
 
-    color: var(--azul-medio);
+    color: var(--blanco);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1345,9 +1348,9 @@ body {
    SECCIÓN PREGUNTAS FRECUENTES (FAQ)
    ========================================= */
 
-/* Contenedor principal con fondo cian */
+/* Contenedor principal con fondo azul */
 .faq-wrap {
-    background-color: var(--cian-principal); 
+    background-color: var(--azul-acento); 
     padding: 4.5rem 2rem;
     width: 100%;
 }
@@ -1397,13 +1400,13 @@ body {
     font-size: clamp(2rem, 4vw, 2.75rem);
     margin-bottom: 1rem;
     letter-spacing: -1px;
-    color: var(--azul-oscuro);
+    color: var(--blanco);
 }
 
 /* Subtítulo */
 .faq-sub {
     font-size: 1.15rem;
-    color: var(--azul-oscuro);
+    color: var(--blanco);
     font-weight: 400;
     opacity: 0.85; 
     max-width: 600px;
@@ -1490,8 +1493,8 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    background: rgba(117, 221, 211, 0.18);
-    border: 1px solid rgba(117, 221, 211, 0.55);
+    background: rgba(3, 92, 128, 0.08);
+    border: 1px solid rgba(3, 92, 128, 0.28);
     border-radius: 10px;
 }
 
@@ -1522,8 +1525,8 @@ body {
     justify-content: center;
     min-height: 40px;
     padding: 0 1rem;
-    background: var(--cian-principal);
-    color: var(--azul-oscuro);
+    background: var(--azul-acento);
+    color: var(--blanco);
     border-radius: 7px;
     font-size: 13px;
     font-weight: 700;
